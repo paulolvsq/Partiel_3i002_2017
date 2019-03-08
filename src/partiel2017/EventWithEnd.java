@@ -24,5 +24,6 @@ public class EventWithEnd extends Event implements IEventWithEnd {
 	public IEventWithEnd copy() {
 		return new EventWithEnd(this.getTitle(), this.getDate(), this.getStartHour(), this.endHour);
 	}
+    
 
 }
