@@ -1,4 +1,4 @@
-package calendrier;
+package partiel2017;
 
 public class Event implements IEvent {
 	
@@ -11,46 +11,37 @@ public class Event implements IEvent {
 		this.date = date;
 		this.startHour = startHour;
 	}
-
-	@Override
+	
 	public String getTitle() {
 		return this.title;
 	}
-
-	@Override
+	
 	public int getDate() {
 		return this.date;
 	}
-
-	@Override
+	
 	public int getStartHour() {
 		return this.startHour;
 	}
-
-	@Override
+	
 	public void setTitle(String title) {
 		this.title = title;
 	}
-
-	@Override
+	
 	public void setStartHour(int hour) {
 		this.startHour = hour;
 	}
-
-	@Override
+	
 	public void print() {
 		System.out.println(this.toString());
 	}
 	
-	public String toString() {
-		return title+":"+date+":"+startHour;
-	}
-
-	@Override
 	public IEvent copy() {
-		return new Event(title, date, startHour);
+		return new Event(this.title, this.date, this.startHour);
 	}
 	
-	
+	public String toString() {
+		return this.title+":"+this.date+":"+this.startHour;
+	}
 
 }

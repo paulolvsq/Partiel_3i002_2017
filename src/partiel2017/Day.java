@@ -1,4 +1,4 @@
-package calendrier;
+package partiel2017;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,18 +10,15 @@ public class Day implements IDay {
 	public Day() {
 		events = new ArrayList<>();
 	}
-
-	@Override
-	public List<IEvent> getEvents() {
-		return events;
+	
+	public List<IEvent> getEvents() { 
+		return this.events;
 	}
-
-	@Override
+	
 	public IDay copy() {
 		Day res = new Day();
-		for(IEvent event : this.events) {
-			res.getEvents().add(event.copy());
-		}
+		for(IEvent e : this.events)
+			res.getEvents().add(e.copy());
 		return res;
 	}
 
